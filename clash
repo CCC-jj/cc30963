@@ -6,9 +6,9 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: LA, server: trojan.la.cc30963.top, port: 443, type: trojan, password: cc466987124, sni: trojan.la.cc30963.top, skip-cert-verify: true, udp: true}
-  - {name: bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205, server: bwh.cc30963.top, port: 443, type: vmess, uuid: 577127a9-79e0-42df-837d-71a7b87f4205, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ncgdvws, ws-headers: {Host: bwh.cc30963.top}, udp: true}
-  - {name: bwh.cc30963.top_Trojan, server: bwh.cc30963.top, port: 443, type: trojan, password: 577127a9-79e0-42df-837d-71a7b87f4205, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
-  - {name: bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2, server: bwh.cc30963.top, port: 443, type: trojan, password: 577127a9-79e0-42df-837d-71a7b87f4205, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
+  - {name: bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205, server: bwh.cc30963.top, port: 2048, type: vmess, uuid: 577127a9-79e0-42df-837d-71a7b87f4205, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ncgdvws, ws-headers: {Host: bwh.cc30963.top}, udp: true}
+  - {name: bwh.cc30963.top_Trojan, server: bwh.cc30963.top, port: 2048, type: trojan, password: 577127a9-79e0-42df-837d-71a7b87f4205, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
+  - {name: bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2, server: bwh.cc30963.top, port: 2048, type: trojan, password: 577127a9-79e0-42df-837d-71a7b87f4205, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
