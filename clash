@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: trojan-tcp, server: bwh.cc30963.top, port: 5438, type: trojan, password: aaabf5c0-b004-4c9c-98dc-96bd7ffd9f4d, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
+  - {name: trojan-tcp, server: bwh.cc30963.top, port: 911, type: trojan, password: 4112e114-eb77-4d16-b59c-8313a33cdb1e, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
