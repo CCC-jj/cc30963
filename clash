@@ -5,36 +5,27 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: LA, server: trojan.la.cc30963.top, port: 443, type: trojan, password: cc466987124, sni: trojan.la.cc30963.top, skip-cert-verify: true, udp: true}
+  - {name: trojan-tcp, server: bwh.cc30963.top, port: 911, type: trojan, password: 4112e114-eb77-4d16-b59c-8313a33cdb1e, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -53,10 +44,7 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -67,29 +55,20 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -105,10 +84,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - LA
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205
-      - bwh.cc30963.top_Trojan
-      - bwh.cc30963.top_577127a9-79e0-42df-837d-71a7b87f4205 2
+      - trojan-tcp
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
