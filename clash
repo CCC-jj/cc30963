@@ -5,7 +5,9 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: trojan-tcp, server: bwh.cc30963.top, port: 857, type: trojan, password: 4112e114-eb77-4d16-b59c-8313a33cdb1e, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
+  - {"name":"vless-tcp-xtls","type":"vless","server":"bwh.cc30963.top","port":4477,"uuid":"304ef449-e2b6-4d68-902a-d6c71a9481cf","tls":true,"flow":"xtls-rprx-vision","network":"tcp"}
+  - {"name":"vless-ws-tls","type":"vless","server":"bwh.cc30963.top","port":4477,"uuid":"304ef449-e2b6-4d68-902a-d6c71a9481cf","tls":true,"network":"ws","ws-opts":{"path":"/BWPH31"}}
+  - {"name":"vless-mKCP","type":"vless","server":"bwh.cc30963.top","port":2001,"uuid":"304ef449-e2b6-4d68-902a-d6c71a9481cf","tls":false,"network":"kcp"}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
