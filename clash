@@ -7,7 +7,6 @@ external-controller: :9090
 proxies:
   - {name: vmess-ws-tls, server: bwh.cc30963.top, port: 4477, type: vmess, uuid: 304ef449-e2b6-4d68-902a-d6c71a9481cf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /64D0TYGM, headers: {Host: bwh.cc30963.top}}}
   - {name: trojan-tcp, server: bwh.cc30963.top, port: 4477, type: trojan, password: 304ef449-e2b6-4d68-902a-d6c71a9481cf}
-  - {name: ShadowSocks, server: bwh.cc30963.top, port: 4001, type: ss, cipher: aes-128-gcm, password: 304ef449-e2b6-4d68-902a-d6c71a9481cf}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,7 +15,6 @@ proxy-groups:
       - DIRECT
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -25,7 +23,6 @@ proxy-groups:
     proxies:
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -34,7 +31,6 @@ proxy-groups:
       - 🎯 全球直连
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
   - name: 📲 电报信息
     type: select
     proxies:
@@ -42,7 +38,6 @@ proxy-groups:
       - 🎯 全球直连
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -50,7 +45,6 @@ proxy-groups:
       - 🚀 节点选择
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -58,7 +52,6 @@ proxy-groups:
       - 🎯 全球直连
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -67,7 +60,6 @@ proxy-groups:
       - ♻️ 自动选择
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -92,7 +84,6 @@ proxy-groups:
       - ♻️ 自动选择
       - vmess-ws-tls
       - trojan-tcp
-      - ShadowSocks
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
