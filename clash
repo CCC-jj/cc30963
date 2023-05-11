@@ -1,3 +1,4 @@
+Glarity SummaryGlarity Summary
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -5,15 +6,13 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: vmess-ws-tls, server: bwh.cc30963.top, port: 4477, type: vmess, uuid: 304ef449-e2b6-4d68-902a-d6c71a9481cf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /64D0TYGM, headers: {Host: bwh.cc30963.top}}}
-  - {name: trojan-tcp, server: bwh.cc30963.top, port: 4477, type: trojan, password: 304ef449-e2b6-4d68-902a-d6c71a9481cf}
+  - {name: trojan-tcp, server: bwh.cc30963.top, port: 4399, type: trojan, password: dd98e64b-c622-4442-bfbb-c7a280a33b62}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - vmess-ws-tls
       - trojan-tcp
   - name: ♻️ 自动选择
     type: url-test
@@ -21,7 +20,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - vmess-ws-tls
       - trojan-tcp
   - name: 🌍 国外媒体
     type: select
@@ -29,28 +27,24 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - vmess-ws-tls
       - trojan-tcp
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - vmess-ws-tls
       - trojan-tcp
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - vmess-ws-tls
       - trojan-tcp
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - vmess-ws-tls
       - trojan-tcp
   - name: 📢 谷歌FCM
     type: select
@@ -58,7 +52,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - vmess-ws-tls
       - trojan-tcp
   - name: 🎯 全球直连
     type: select
@@ -82,7 +75,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - vmess-ws-tls
       - trojan-tcp
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
