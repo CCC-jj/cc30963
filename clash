@@ -6,7 +6,8 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: trojan-tcp, server: bwh.cc30963.top, port: 7080, type: trojan, password: dd98e64b-c622-4442-bfbb-c7a280a33b62, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
-  - {name: vless-tcp-xtls, server: cloudcone.cc30963.top, port: 443, type: vless, uuid: a8eb8126-d80d-4914-8696-3998509ab55b, skip-cert-verify: true, network: tcp, flow: xtls-rprx-vision, tls: true, udp: true}
+  - {name: vmess-ws-tls, server: cloudcone.cc30963.top, port: 443, type: vmess, uuid: a8eb8126-d80d-4914-8696-3998509ab55b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /JWB29WHN, headers: {Host: cloudcone.cc30963.top}}, udp: true}
+  - {name: trojan-tcp2, server: cloudcone.cc30963.top, port: 443, type: trojan, password: a8eb8126-d80d-4914-8696-3998509ab55b, skip-cert-verify: false, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -14,14 +15,16 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -29,7 +32,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -49,7 +53,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -61,14 +66,16 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -76,7 +83,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,7 +101,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - trojan-tcp
-      - vless-tcp-xtls
+      - vmess-ws-tls
+      - trojan-tcp2
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
