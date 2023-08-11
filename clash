@@ -8,6 +8,9 @@ proxies:
   - {name: trojan-tcp, server: bwh.cc30963.top, port: 6666, type: trojan, password: dd98e64b-c622-4442-bfbb-c7a280a33b62, sni: bwh.cc30963.top, skip-cert-verify: true, udp: true}
   - {name: vmess-ws-tls, server: cloudcone.cc30963.top, port: 443, type: vmess, uuid: a8eb8126-d80d-4914-8696-3998509ab55b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /JWB29WHN, headers: {Host: cloudcone.cc30963.top}}, udp: true}
   - {name: trojan-tcp2, server: cloudcone.cc30963.top, port: 443, type: trojan, password: a8eb8126-d80d-4914-8696-3998509ab55b, skip-cert-verify: false, udp: true}
+  - {name: vmess-ws-tls3, server: aliyun.cc30963.top, port: 443, type: vmess, uuid: 4b3b97ce-11de-4547-a6e6-b6c7ba720fb0, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /WKY3NQ39, headers: {Host: aliyun.cc30963.top}}}
+  - {name: trojan-tcp3, server: aliyun.cc30963.top, port: 443, type: trojan, password: 4b3b97ce-11de-4547-a6e6-b6c7ba720fb0}
+  - {name: ShadowSocks3, server: aliyun.cc30963.top, port: 4001, type: ss, cipher: aes-128-gcm, password: 4b3b97ce-11de-4547-a6e6-b6c7ba720fb0}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -17,6 +20,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -25,6 +31,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -34,6 +43,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -55,6 +67,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -68,6 +83,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
   - name: 📲 电报信息
     type: select
     proxies:
@@ -76,6 +94,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -85,6 +106,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -103,6 +127,9 @@ proxy-groups:
       - trojan-tcp
       - vmess-ws-tls
       - trojan-tcp2
+      - vmess-ws-tls3
+      - trojan-tcp3
+      - ShadowSocks3
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
