@@ -7,8 +7,8 @@ external-controller: :9090
 proxies:
   - {name: vmess-ws-tls, server: cloudcone.cc30963.top, port: 8787, type: vmess, uuid: a8eb8126-d80d-4914-8696-3998509ab55b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /JWB29WHN, headers: {Host: cloudcone.cc30963.top}}, udp: true}
   - {name: trojan-tcp, server: cloudcone.cc30963.top, port: 8787, type: trojan, password: a8eb8126-d80d-4914-8696-3998509ab55b, skip-cert-verify: true, udp: true}
-  - {name: cc.cc30963.top_Trojan, server: cc.cc30963.top, port: 4399, type: trojan, password: 7c643709-13b4-4b66-91ee-0a817c9b3a40, sni: cc.cc30963.top, skip-cert-verify: true, udp: true}
-  - {name: 7c643709-Trojan_gRPC, server: cc.cc30963.top, port: 4399, type: trojan, password: 7c643709-13b4-4b66-91ee-0a817c9b3a40, sni: cc.cc30963.top, skip-cert-verify: true, udp: true}
+  - {name: cc.cc30963.top_Trojan, server: cc.cc30963.top, port: 4399, type: trojan, password: 7c643709-13b4-4b66-91ee-0a817c9b3a40, skip-cert-verify: true, udp: true}
+  - {name: 7c643709-Trojan_gRPC, server: cc.cc30963.top, port: 4399, type: trojan, password: 7c643709-13b4-4b66-91ee-0a817c9b3a40, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
