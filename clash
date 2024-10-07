@@ -5,9 +5,9 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 001, server: us.cc30963.top, port: 80, type: vmess, uuid: 8ebfbd7b-a3ed-46c7-abcd-bc289fe2b80e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: us.cc30963.top}}, udp: true}
-  - {name: 002, server: us.cc30963.top, port: 443, type: vmess, uuid: 8ebfbd7b-a3ed-46c7-abcd-bc289fe2b80e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: us.cc30963.top}}, udp: true}
-  - {name: 003, server: us.cc30963.top, port: 8080, type: vmess, uuid: 841799f5-95f2-4f61-d112-70370aea6fac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: us.cc30963.top}}, udp: true}
+  - {name: 001, server: nodl.cc30963.top, port: 80, type: vmess, uuid: 8ebfbd7b-a3ed-46c7-abcd-bc289fe2b80e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: nodl.cc30963.top}}, udp: true}
+  - {name: 002, server: nodl.cc30963.top, port: 443, type: vmess, uuid: 8ebfbd7b-a3ed-46c7-abcd-bc289fe2b80e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: nodl.cc30963.top}}, udp: true}
+  - {name: 003, server: nodl.cc30963.top, port: 8080, type: vmess, uuid: 841799f5-95f2-4f61-d112-70370aea6fac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: nodl.cc30963.top}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
