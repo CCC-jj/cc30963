@@ -1,50 +1,33 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: :9090
 proxies:
-  - {name: 003, server: us.cc30963.top, port: 8080, type: vmess, uuid: 841799f5-95f2-4f61-d112-70370aea6fac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aa, headers: {Host: us.cc30963.top}}, udp: true}
+  - {name: 01, server: nodl.cc30963.top, port: 44404, type: vmess, uuid: 021ee4fc-ba7a-4c01-a360-241c889f6edd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 02, server: nodl.cc30963.top, port: 15982, type: trojan, password: ds8iq0Iy2Z, skip-cert-verify: false}
+  - {name: 03, server: nodl.cc30963.top, port: 58089, type: ss, cipher: aes-256-gcm, password: 215RIbThht}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 003
+      - 01
+      - 02
+      - 03
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 003
-  - name: 🎥 NETFLIX
-    type: select
-    proxies:
-      - 🔰 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - 003
-  - name: ⛔️ 广告拦截
-    type: select
-    proxies:
-      - 🛑 全球拦截
-      - 🎯 全球直连
-      - 🔰 节点选择
-  - name: 🚫 运营劫持
-    type: select
-    proxies:
-      - 🛑 全球拦截
-      - 🎯 全球直连
-      - 🔰 节点选择
+      - 01
+      - 02
+      - 03
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 003
+      - 01
+      - 02
+      - 03
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -55,20 +38,26 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 003
+      - 01
+      - 02
+      - 03
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 003
+      - 01
+      - 02
+      - 03
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 003
+      - 01
+      - 02
+      - 03
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -84,7 +73,9 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 003
+      - 01
+      - 02
+      - 03
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
@@ -9071,16 +9062,6 @@ rules:
   - DOMAIN-SUFFIX,yuanchengxiezuo.com,🛑 全球拦截
   - DOMAIN-SUFFIX,zbrushcn.com,🛑 全球拦截
   - DOMAIN-SUFFIX,zhzzx.com,🛑 全球拦截
-  - DOMAIN-SUFFIX,netflix.com,🎥 NETFLIX
-  - DOMAIN-SUFFIX,netflix.net,🎥 NETFLIX
-  - DOMAIN-SUFFIX,nflxext.com,🎥 NETFLIX
-  - DOMAIN-SUFFIX,nflximg.com,🎥 NETFLIX
-  - DOMAIN-SUFFIX,nflximg.net,🎥 NETFLIX
-  - DOMAIN-SUFFIX,nflxso.net,🎥 NETFLIX
-  - DOMAIN-SUFFIX,nflxvideo.net,🎥 NETFLIX
-  - DOMAIN-KEYWORD,netflixdnstest,🎥 NETFLIX
-  - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,🎥 NETFLIX
-  - DOMAIN-KEYWORD,dualstack.apiproxy-,🎥 NETFLIX
   - DOMAIN-SUFFIX,ext-twitch.tv,🌍 国外媒体
   - DOMAIN-SUFFIX,jtvnw.net,🌍 国外媒体
   - DOMAIN-SUFFIX,ttvnw.net,🌍 国外媒体
@@ -9898,5 +9879,5 @@ rules:
   - DOMAIN-KEYWORD,yunpan,🎯 全球直连
   - DOMAIN-KEYWORD,Thunder,🎯 全球直连
   - DOMAIN-KEYWORD,XLLiveUD,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连,no-resolve
   - MATCH,🐟 漏网之鱼
