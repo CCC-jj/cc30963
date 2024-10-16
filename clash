@@ -1,33 +1,25 @@
 proxies:
-  - {name: 01, server: nodl.cc30963.top, port: 44404, type: vmess, uuid: 021ee4fc-ba7a-4c01-a360-241c889f6edd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 02, server: nodl.cc30963.top, port: 15982, type: trojan, password: ds8iq0Iy2Z, skip-cert-verify: false}
-  - {name: 03, server: nodl.cc30963.top, port: 58089, type: ss, cipher: aes-256-gcm, password: 215RIbThht}
+  - {name: 01-69xu6m2j, server: free.cc30963.top, port: 443, type: vmess, uuid: 629c6691-df41-4ba0-a219-3128bfe7a4d0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /69xu6m2j, headers: {Host: free.cc30963.top}}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 01
-      - 02
-      - 03
+      - 01-69xu6m2j
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 01
-      - 02
-      - 03
+      - 01-69xu6m2j
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 01
-      - 02
-      - 03
+      - 01-69xu6m2j
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -38,26 +30,20 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 01
-      - 02
-      - 03
+      - 01-69xu6m2j
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 01
-      - 02
-      - 03
+      - 01-69xu6m2j
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 01
-      - 02
-      - 03
+      - 01-69xu6m2j
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,9 +59,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 01
-      - 02
-      - 03
+      - 01-69xu6m2j
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
