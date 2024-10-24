@@ -1,3 +1,9 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
 proxies:
   - {name: 01-69xu6m2j, server: free.cc30963.top, port: 443, type: vmess, uuid: 629c6691-df41-4ba0-a219-3128bfe7a4d0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /69xu6m2j, headers: {Host: free.cc30963.top}}}
 proxy-groups:
