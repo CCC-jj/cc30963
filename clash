@@ -1,5 +1,4 @@
 proxies:
-  - {name: 01-69xu6m2j, server: free.cc30963.top, port: 443, type: vmess, uuid: 629c6691-df41-4ba0-a219-3128bfe7a4d0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /69xu6m2j, headers: {Host: free.cc30963.top}}}
   - {name: 7apxm7fv, server: free.cc30963.top, port: 11516, type: vmess, uuid: ca55b0e7-cc1b-458d-adb0-f89a2a2e1838, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /7apxm7fv, headers: {Host: free.cc30963.top}}}
 proxy-groups:
   - name: 🔰 节点选择
@@ -7,14 +6,12 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 01-69xu6m2j
       - 7apxm7fv
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 01-69xu6m2j
       - 7apxm7fv
   - name: 🌍 国外媒体
     type: select
@@ -22,7 +19,6 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 01-69xu6m2j
       - 7apxm7fv
   - name: 🌏 国内媒体
     type: select
@@ -34,14 +30,12 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 01-69xu6m2j
       - 7apxm7fv
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 01-69xu6m2j
       - 7apxm7fv
   - name: 🍎 苹果服务
     type: select
@@ -49,7 +43,6 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 01-69xu6m2j
       - 7apxm7fv
   - name: 🎯 全球直连
     type: select
@@ -66,7 +59,6 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 01-69xu6m2j
       - 7apxm7fv
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
