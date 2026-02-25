@@ -36,6 +36,7 @@ proxy-groups:
     interval: 300
     proxies:
       - DIRECT
+      - "cc|kjIx.love@xray.com"
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -10334,3 +10335,4 @@ rules:
   - DOMAIN-KEYWORD,XLLiveUD,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
+
