@@ -28,20 +28,20 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🎯 全球直连
       - "cc|kjIx.love@xray.com"
+      - 🎯 全球直连
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - DIRECT
       - "cc|kjIx.love@xray.com"
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
+      - "cc|kjIx.love@xray.com"
       - 🎯 全球直连
   - name: ⛔️ 广告拦截
     type: select
@@ -60,6 +60,7 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
+      - "cc|kjIx.love@xray.com"
       - 🎯 全球直连
   - name: 🌏 国内媒体
     type: select
@@ -75,6 +76,7 @@ proxy-groups:
     type: select
     proxies:
       - 🔰 节点选择
+      - "cc|kjIx.love@xray.com"
       - 🎯 全球直连
   - name: 🍎 苹果服务
     type: select
@@ -10335,4 +10337,5 @@ rules:
   - DOMAIN-KEYWORD,XLLiveUD,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
+
 
